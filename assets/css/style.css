@@ -1,0 +1,253 @@
+:root{
+    --moduleBGColor: rgb(255, 253, 230);
+    --sidebarWidth: 12%;
+    --numOfSections: 3;
+    --cardRadius: 15px;
+}
+
+main{
+    width: calc(100% - var(--sidebarWidth));
+    height: 100%;
+    margin-left: var(--sidebarWidth);
+    background-color: #333738;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar{
+    width: var(--sidebarWidth);
+    height: 100%;
+    position: fixed;
+    background-color: #B4B5BF;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sidebar-module{
+    width: 50%;
+    height: 12%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(197, 196, 178);
+    background-color: var(--moduleBGColor);
+    background-size: cover;
+    background-position: center center, center center;
+    z-index: 1;
+}
+
+#home-button{
+    background: url(../imgs/home-icon.png) center center, linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: cover;
+}
+
+#webdev-button{
+    background: url(../imgs/www-icon.png) center center, linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: cover;
+}
+
+#unity-button{
+    background: url(../imgs/unity-button-icon.png) center center, linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: cover;
+}
+
+#contact-button{
+    background: url(../imgs/email-icon.png) center center, linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: cover;
+}
+
+/* Parent: Main, Children: area-header, img, figcaption, card-area
+    When shown display type: flex*/
+.content-area{
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 25px 20px;
+}
+
+.content-area figcaption{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.089);
+    padding: 15px;
+}
+
+.area-header{
+    width: 100%;
+    height: 20%;
+    background-size: cover;
+}
+
+.area-header::after{
+    content: "Featured Work";
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30%;
+    background-color: #00000080;
+    padding: 0px 5px 5px 0px;
+}
+
+#webdev-header{
+    background-color: #615A71;
+}
+
+#unity-header{
+    background-color: #615A71;
+    
+}
+
+.card-area{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 4% 5%;
+    height: 40%;
+    width: 100%;
+}
+
+.content-card{
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    border: 1px solid black;
+    background-color: rgb(238, 238, 238);
+    border-radius: var(--cardRadius);
+}
+
+.content-card img{
+    display: block;
+    min-width: 30%;
+    border-radius: var(--cardRadius);
+}
+
+.descr-card{
+    max-width: 50%;
+    margin-top: 3px;
+    margin-left: 3%;
+}
+
+.descr-card a{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    color: #615A71;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    margin-left: var(--sidebarWidth);
+    background-color: #333738;
+}
+
+#home-area{
+    align-items: stretch;
+    align-content: stretch;
+    gap: 0px 0px;
+}
+
+#home-area section{
+    width: 100%;
+    height: calc(100% / var(--numOfSections));
+    background-size: cover;
+    opacity: 0.5;
+}
+
+#home-area section:hover{
+    opacity: 1;
+}
+
+#home-area p{
+    color: white;
+    font-weight: bold;
+}
+
+#bio{
+    background-image: url(https://via.placeholder.com/300);
+    display: flex;
+    row-gap: 50%;
+    flex-flow: column-reverse nowrap;
+}
+
+#bio::after{
+    content: "Noel Ramirez: Webdev, Game Designer, and Programmer";
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 0px 5px 5px 0px;
+}
+
+#bio img{
+    border-radius: 50px;
+}
+
+#bio-img-bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.753);
+    width: 10%;
+    height: 60%;
+}
+
+#webdev-section{
+    background-image: url(https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760);
+}
+
+#webdev-section::after{
+    content: "Web Development Portfolio";
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 0px 5px 5px 0px;
+}
+
+#unity-section{
+    background: url(https://unity.com/logo-unity-web.png), linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+    background-position: center center, center center;
+}
+
+#unity-section::after{
+    content: "Unity Portfolio";
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.534);
+    padding: 0px 5px 5px 0px;
+}
+
+#bg1{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+}
+
+#bg2{
+    height: 50%;
+    width: 100%;
+    background-color: white;
+}
+
+footer a{
+    width: 20%;
+    height: 80%;
+}
+
+a img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50px;
+}
