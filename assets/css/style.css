@@ -75,6 +75,7 @@ body{
     color: white;
     background-color: rgba(255, 255, 255, 0.089);
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 .area-header{
@@ -128,9 +129,10 @@ body{
 }
 
 .descr-card{
-    max-width: 50%;
+    max-width: 75%;
     margin-top: 3px;
     margin-left: 3%;
+    font-size: 14px;
 }
 
 .descr-card a{
@@ -142,7 +144,6 @@ body{
 
 footer{
     display: flex;
-    justify-content: center;
     padding-top: 10px;
     margin-left: var(--sidebarWidth);
     background-color: #333738;
@@ -244,10 +245,32 @@ footer{
 footer a{
     width: 20%;
     height: 80%;
+    text-align: center;
 }
 
 a img{
     width: 50%;
     height: 50%;
     border-radius: 50px;
+}
+
+@media screen and (max-width: 1600px){
+
+    footer{
+        padding-top: 10%;
+    }
+
+    .card-area{
+        flex-flow: column nowrap;
+        align-items: center;
+        height: 60%;
+    }
+
+    .content-card{
+        max-height: 40%;
+    }
+    
+    :root{
+        --sidebarWidth: 20%;
+    }
 }
