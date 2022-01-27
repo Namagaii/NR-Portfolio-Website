@@ -7,7 +7,7 @@
 
 main{
     width: calc(100% - var(--sidebarWidth));
-    height: 100%;
+    height: 80%;
     margin-left: var(--sidebarWidth);
     background-color: #333738;
 }
@@ -46,6 +46,16 @@ body{
 
 #webdev-button{
     background: url(../imgs/www-icon.png) center center, linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: cover;
+}
+
+#home-button:hover{
+    background: url(../imgs/home-icon.png) center center, linear-gradient(rgb(217, 220, 241), rgb(217, 220, 241));
+    background-size: cover;
+}
+
+#webdev-button:hover{
+    background: url(../imgs/www-icon.png) center center, linear-gradient(rgb(217, 220, 241), rgb(217, 220, 241));
     background-size: cover;
 }
 
@@ -152,11 +162,13 @@ footer{
     padding-top: 10px;
     margin-left: var(--sidebarWidth);
     background-color: #333738;
+    justify-content: center;
 }
 
 #home-area{
     align-items: stretch;
     align-content: stretch;
+    justify-content: stretch;
     gap: 0px 0px;
 }
 
@@ -190,7 +202,9 @@ footer{
     font-weight: bold;
     width: 30%;
     background-color: rgba(0, 0, 0, 0.534);
-    padding: 0px 5px 5px 0px;
+    padding: 10px 5px 10px 0px;
+    position: relative;
+    top: -11.2rem;
 }
 
 #bio img{
@@ -257,6 +271,10 @@ a img{
     width: 50%;
     height: 50%;
     border-radius: 50px;
+}
+
+footer a:hover{
+    background-color: rgb(90, 86, 86);
 }
 
 @media screen and (max-width: 1600px){
